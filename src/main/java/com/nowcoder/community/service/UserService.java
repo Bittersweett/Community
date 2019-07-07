@@ -179,4 +179,13 @@ public class UserService implements CommunityConstant {
     public void logout(String ticket) {
         loginTicketMapper.updateStatus(ticket, 1); //status = 1表示无效
     }
+
+    /**
+     * 查询ticket
+     * @param ticket
+     * @return
+     */
+    public LoginTicket findLoginTicket(String ticket) {
+        return loginTicketMapper.selectByTicket(ticket);
+    }
 }
