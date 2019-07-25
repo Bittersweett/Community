@@ -122,6 +122,7 @@ public class SensitiveFilter {
 
     /**
      * 判断是否为符号
+     *
      * @param c
      * @return
      */
@@ -135,7 +136,7 @@ public class SensitiveFilter {
     private class TrieNode {
 
         private boolean isKeyWordEnd = false; //关键词结束标识
-        private Map<Character, TrieNode> subnode = new HashMap<>(); //字节点(key是下级字符,value是下级节点)
+        private Map<Character, TrieNode> subNode = new HashMap<>(); //子节点(key是下级字符,value是下级节点)
 
         public boolean isKeyWordEnd() {
             return isKeyWordEnd;
@@ -147,12 +148,12 @@ public class SensitiveFilter {
 
         //添加子节点
         public void addSubNode(Character c, TrieNode node) {
-            subnode.put(c, node);
+            subNode.put(c, node);
         }
 
         //获取子节点
         public TrieNode getSubNode(Character c) {
-            return subnode.get(c);
+            return subNode.get(c);
         }
     }
 
