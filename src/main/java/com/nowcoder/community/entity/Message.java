@@ -8,9 +8,9 @@ public class Message {
     private int fromId;
     private int toId;
     private String conversationId;
-    private String text;
+    private String content;
     private int status;
-    Date createTime;
+    private Date createTime;
 
     public int getId() {
         return id;
@@ -44,12 +44,12 @@ public class Message {
         this.conversationId = conversationId;
     }
 
-    public String getText() {
-        return text;
+    public String getContent() {
+        return content;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public int getStatus() {
@@ -75,7 +75,7 @@ public class Message {
                 ", fromId=" + fromId +
                 ", toId=" + toId +
                 ", conversationId='" + conversationId + '\'' +
-                ", text='" + text + '\'' +
+                ", content='" + content + '\'' +
                 ", status=" + status +
                 ", createTime=" + createTime +
                 '}';

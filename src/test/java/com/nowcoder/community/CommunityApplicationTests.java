@@ -1,5 +1,6 @@
 package com.nowcoder.community;
 
+import com.nowcoder.community.controller.AlphaController;
 import com.nowcoder.community.dao.AlphaDao;
 import com.nowcoder.community.service.AlphaService;
 import org.junit.Test;
@@ -71,9 +72,12 @@ public class CommunityApplicationTests implements ApplicationContextAware {
 	@Autowired
 	private SimpleDateFormat simpleDateFormat;
 
+	@Autowired
+	private AlphaController alphaController;
+
 	@Test
 	public void testDI() {
-		System.out.println("testDI " + alphaDao);
+		System.out.println("testDI " + alphaDao.select());
 		System.out.println("testService" + alphaService);
 		System.out.println("simpleDateFormat" + simpleDateFormat);
 	}
