@@ -34,9 +34,9 @@ public class FollowController implements CommunityConstant {
 
     @Autowired
     private EventProducer eventProducer;
+1
     /**
      * 关注
-     *
      * @param entityType
      * @param entityId
      * @return

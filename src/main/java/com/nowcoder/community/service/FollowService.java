@@ -22,7 +22,6 @@ public class FollowService implements CommunityConstant {
     private UserService userService;
     /**
      * 关注
-     *
      * @param userId
      * @param entityType
      * @param entityId
@@ -37,6 +36,9 @@ public class FollowService implements CommunityConstant {
                 System.out.println("look!");
                 operations.multi();
 
+                /**
+                 * 需要将关注的时间存进zset里面
+                 */
                 operations.opsForZSet().add(followeeKey, entityId, System.currentTimeMillis());
                 operations.opsForZSet().add(followerKey, userId, System.currentTimeMillis());
 
@@ -47,7 +49,6 @@ public class FollowService implements CommunityConstant {
 
     /**
      * 取消关注
-     *
      * @param userId
      * @param entityType
      * @param entityId

@@ -16,6 +16,7 @@ public class LikeService {
 
     /**
      * 点赞
+     *
      * @param userId
      * @param entityType
      * @param entityId
@@ -78,12 +79,13 @@ public class LikeService {
 
     /**
      * 查询某个用户获得的赞
+     *
      * @param userId
      * @return
      */
     public int findUserLikeCount(int userId) {
         String userLikeKey = RedisKeyUtil.getUserLikeKey(userId);
-        Integer count = (Integer)redisTemplate.opsForValue().get(userLikeKey);
+        Integer count = (Integer) redisTemplate.opsForValue().get(userLikeKey);
         return count == null ? 0 : count;
     }
 }

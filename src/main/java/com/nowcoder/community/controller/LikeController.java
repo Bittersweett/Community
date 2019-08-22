@@ -28,6 +28,14 @@ public class LikeController implements CommunityConstant {
     @Autowired
     private EventProducer eventProducer;
 
+    /**
+     * 点赞（使用Redis的Set进行存储）
+     * @param entityType
+     * @param entityId
+     * @param entityUserId
+     * @param postId
+     * @return
+     */
     @RequestMapping(path = "/like", method = RequestMethod.POST)
     @ResponseBody
     public String like(int entityType, int entityId, int entityUserId, int postId) {
