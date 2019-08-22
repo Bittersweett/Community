@@ -20,4 +20,9 @@ public interface CommunityConstant {
     String TOPIC_PUBLISH = "publish"; //主题：发帖
 
     int SYSTEM_USER_ID = 1; //系统用户ID
+
+    String AUTHORITY_USER = "user"; // 普通用户
+    String AUTHORITY_ADMIN = "admin"; // 管理员
+    String AUTHORITY_MODERATOR = "moderator"; // 版主
+
 }
