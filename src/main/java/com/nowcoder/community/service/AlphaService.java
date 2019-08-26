@@ -126,7 +126,7 @@ public class AlphaService {
         logger.debug("execute1");
     }
 
-    @Scheduled(initialDelay = 10000, fixedDelay = 1000) //initialDelay表示方法调用之后，延迟多久去执行, fixedDelay表示多长时间执行一次
+    //@Scheduled(initialDelay = 10000, fixedDelay = 1000) //initialDelay表示方法调用之后，延迟多久去执行, fixedDelay表示多长时间执行一次
     public void execute2() {
         logger.debug("execute2");
     }
